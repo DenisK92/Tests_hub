@@ -18,8 +18,8 @@ public class AlfabankTest {
 	@Test
 	void testAlfaBank() {
 		open(baseUrl);
-		$("a[href="/make-money/"]").click();
-		$("a["href="/make-money/deposits/alfa/?platformId=alfasite"]")).click();
+		$(byText("Вклады")).click();
+		$("a["href="/make-money/deposits/alfa/?platformId=alfasite"]").click();
 		$([data-test-id="resident-notResident"]).click();
 		$([data-test-id="resident-resident"]).click();
 		$([name="fullName"]).click().setValue("Иванов Иван Иванович");
